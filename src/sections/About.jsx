@@ -39,8 +39,8 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headtext">Location</p>
             <p className="subtext">
-            Based in chennai , Tamil Nadu , India. Open to remote opportunities and internships worldwide. Eager to learn, collaborate, and contribute <br></br>to 
-            cutting-edge tech <br></br> projects.
+            Based in Tiruttani, Tamil Nadu, India. Open to remote opportunities and internships worldwide. Eager to learn, collaborate, and contribute to 
+            cutting-edge tech projects.
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
