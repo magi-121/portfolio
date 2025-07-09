@@ -8,14 +8,29 @@ const Footer = () => {
         <p>|</p>
         <p>Privacy Policy</p>
       </div>
-      <div className="flex gap-3">
-        {mySocials.map((social, index) => (
-          <a href={social.href} key={index}>
-            <img src={social.icon} className="w-5 h-5" alt={social.name} />
-          </a>
-        ))}
+      <div className="flex gap-5">
+        {mySocials
+          .sort((a, b) => {
+            // Move GitHub right after Instagram
+            if (a.name === "Instagram" && b.name === "GitHub") return -1;
+            if (a.name === "GitHub" && b.name === "Instagram") return 1;
+            return 0;
+          })
+          .map((social, index) => (
+            <a href={social.href} key={index}>
+              <img
+                src={social.icon}
+                className={
+                  social.name === "GitHub"
+                    ? "w-7 h-6"
+                    : "w-5 h-5"
+                }
+                alt={social.name}
+              />
+            </a>
+          ))}
       </div>
-      <p>© 2025 Ali. All rights reserved.</p>
+      <p>© 2025 Magesh. All rights reserved.</p>
     </section>
   );
 };

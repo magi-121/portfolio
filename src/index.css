@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 @import "tailwindcss";
 @theme {
-  --color-primary: #030412;
-  --color-midnight: #06091f;
-  --color-navy: #161a31;
-  --color-indigo: #1f1e39;
-  --color-storm: #282b4b;
-  --color-aqua: #33c2cc;
-  --color-mint: #57db96;
-  --color-royal: #5c33cc;
-  --color-lavender: #7a57db;
-  --color-fuchsia: #ca2f8c;
-  --color-orange: #cc6033;
-  --color-sand: #d6995c;
-  --color-coral: #ea4884;
+  --color-primary: #0a0a0a;
+  --color-midnight: #1a1a2e;
+  --color-navy: #16213e;
+  --color-indigo: #0f3460;
+  --color-storm: #533483;
+  --color-aqua: #00d4ff;
+  --color-mint: #00ff88;
+  --color-royal: #ff006e;
+  --color-lavender: #8338ec;
+  --color-fuchsia: #ff006e;
+  --color-orange: #ffbe0b;
+  --color-sand: #fb8500;
+  --color-coral: #ff006e;
   --animate-orbit: orbit 50s linear infinite;
   @keyframes orbit {
     0% {
@@ -48,11 +48,15 @@
   }
 }
 body {
-  background: #030412;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
   font-family: "Funnel Display", sans-serif;
   color: white;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .c-space {
@@ -60,7 +64,7 @@ body {
 }
 
 .hover-animation {
-  @apply hover:-translate-y-1 duration-200;
+  @apply hover:-translate-y-1 hover:scale-105 duration-300 hover:shadow-2xl hover:shadow-aqua/20;
 }
 
 .section-spacing {
@@ -68,11 +72,15 @@ body {
 }
 
 .text-heading {
-  @apply font-bold text-3xl md:text-4xl;
+  @apply font-bold text-3xl md:text-4xl bg-gradient-to-r from-aqua via-mint to-royal bg-clip-text text-transparent;
+  font-family: 'Handjet', sans-serif;
+  font-weight: 500;
 }
 
 .headtext {
-  @apply mt-2 mb-2 text-xl;
+  @apply mt-2 mb-2 text-xl bg-gradient-to-r from-aqua to-mint bg-clip-text text-transparent font-semibold;
+  font-family: 'Handjet', sans-serif;
+  font-weight: 400;
 }
 
 .subtext {
@@ -93,7 +101,7 @@ body {
 }
 /* Button Components */
 .btn {
-  @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden;
+  @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-gradient-to-r from-royal to-lavender w-[12rem] cursor-pointer overflow-hidden hover:from-fuchsia hover:to-royal transition-all duration-300;
 }
 
 /* About Section */
@@ -114,14 +122,14 @@ body {
 }
 
 .grid-default-color {
-  @apply p-6 bg-gradient-to-b from-storm to-indigo rounded-2xl;
+  @apply p-6 bg-gradient-to-br from-storm via-indigo to-royal rounded-2xl border border-aqua/20;
 }
 
 .grid-special-color {
-  @apply p-6 bg-gradient-to-b from-royal to-lavender rounded-2xl;
+  @apply p-6 bg-gradient-to-br from-royal via-lavender to-fuchsia rounded-2xl border border-mint/20;
 }
 .grid-black-color {
-  @apply p-6 bg-gradient-to-tl from-[#3A3A3A] via-[#242424] to-[#3A3A3A] rounded-2xl;
+  @apply p-6 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] rounded-2xl border border-orange/20;
 }
 
 /* Contact Section*/
@@ -130,7 +138,7 @@ body {
 }
 
 .field-input {
-  @apply w-full min-h-10 rounded-md px-3 py-2 text-sm bg-white/10 transition duration-200 placeholder-neutral-500 border border-white/10 mt-2;
+  @apply w-full min-h-10 rounded-md px-3 py-2 text-sm bg-white/10 transition duration-200 placeholder-neutral-500 border border-aqua/30 mt-2 focus:border-aqua focus:bg-white/20;
 }
 
 .field-input-focus {

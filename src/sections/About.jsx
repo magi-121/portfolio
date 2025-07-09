@@ -1,87 +1,46 @@
-import { useRef } from "react";
-import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
-import { Frameworks } from "../components/FrameWorks";
+import { Frameworks } from "../components/Frameworks";
 
 const About = () => {
-  const grid2Container = useRef();
   return (
     <section className="c-space section-spacing" id="about">
       <h2 className="text-heading">About Me</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
-        <div className="flex items-end grid-default-color grid-1">
-          <img
-            src="assets/coding-pov.png"
-            className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
-          />
-          <div className="z-10">
-            <p className="headtext">Hi, I'm Ali Sanati</p>
-            <p className="subtext">
-              Over the last 4 years, I developed my frontend and backend dev
-              skills to deliver dynamic and software and web applications.
+        <div className="grid-default-color grid-1 relative overflow-hidden flex flex-col items-center">
+          <div className="flex justify-center w-full">
+            <img
+              src="assets/ml-coding.png"
+              alt="Magesh KB"
+              className="object-contain rounded-full shadow-lg w-40 h-40 md:w-70 md:h-65 border-4 border-white mt-8 mb-4"
+            />
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-start w-full gap-4 md:gap-8 mb-4 px-2 md:px-8">
+            <p className="headtext whitespace-nowrap">Hi, I&apos;m Magesh</p>
+            <p className="subtext flex-1 max-w-2xl text-center md:text-left break-words">
+              Third-year B.Tech Artificial Intelligence and Machine Learning student at Panimalar Engineering College, passionate about building AI-driven solutions. I&apos;ve completed multiple internships in UI/UX, AI development, and web technologies, gaining hands-on experience with real-world projects.
             </p>
           </div>
-          <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
+          <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
         {/* Grid 2 */}
         <div className="grid-default-color grid-2">
-          <div
-            ref={grid2Container}
-            className="flex items-center justify-center w-full h-full"
-          >
-            <p className="flex items-end text-5xl text-gray-500">
-              CODE IS CRAFT
+          <div className="z-10">
+            <p className="headtext">My Skills</p>
+            <p className="subtext">
+              I&apos;m proficient in <b>Python</b>, <b>React</b>, <b>MediaPipe</b>, <b>OpenCV</b>, and <b>cloud platforms</b>. Certified in <b>Google Cloud</b>, <b>Azure</b>, and <b>Oracle Cloud</b>, I have hands-on experience in <b>AI/ML projects</b> and <b>web development</b>. I&apos;ve developed real-time pose estimation tools, fitness trackers, and full-stack web applications. With a strong foundation in both AI and modern web technologies, I&apos;m passionate about building scalable, innovative solutions that solve real-world problems and deliver meaningful user experiences.
             </p>
-            <Card
-              style={{ rotate: "75deg", top: "30%", left: "20%" }}
-              text="GRASP"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              text="SOLID"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="Design Patterns"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="Design Principles"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "20deg", top: "10%", left: "38%" }}
-              text="SRP"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/csharp-pink.png"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/dotnet-pink.png"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/blazor-pink.png"
-              containerRef={grid2Container}
-            />
           </div>
+          <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
           <div className="z-10 w-[50%]">
-            <p className="headtext">Time Zone</p>
+            <p className="headtext">Location</p>
             <p className="subtext">
-              I'm based in Mars, and open to remote work worldwide
+            Based in chennai , Tamil Nadu , India. Open to remote opportunities and internships worldwide. Eager to learn, collaborate, and contribute <br></br>to 
+            cutting-edge tech <br></br> projects.
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
@@ -100,10 +59,10 @@ const About = () => {
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headText">Teck Stack</p>
+            <p className="headtext">Tech Stack</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools taht
-              allow me to build robust and scalable applications
+              I specialize in AI/ML technologies, web development, and cloud platforms 
+              that allow me to build intelligent and scalable applications
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">

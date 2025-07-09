@@ -30,16 +30,16 @@ const Contact = () => {
     try {
       console.log("From submitted:", formData);
       await emailjs.send(
-        "service_79b0nyj",
-        "template_17us8im",
+        "service_xrx6j6o", // updated service ID
+        "template_ugiyqih", // updated template ID
         {
           from_name: formData.name,
-          to_name: "Ali",
+          to_name: "Magesh",
           from_email: formData.email,
-          to_email: "AliSanatiDev@gmail.com",
+          to_email: "mageshkb.aiml@gmail.com",
           message: formData.message,
         },
-        "pn-Bw_mS1_QQdofuV"
+        "2e9wqocTophlFoL7Y" // updated public key
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
@@ -51,7 +51,7 @@ const Contact = () => {
     }
   };
   return (
-    <section className="relative flex items-center c-space section-spacing">
+    <section className="relative flex items-center c-space section-spacing" id="contact">
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
@@ -64,8 +64,7 @@ const Contact = () => {
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let's Talk</h2>
           <p className="font-normal text-neutral-400">
-            Whether you're loking to build a new website, improve your existing
-            platform, or bring a unique project to life, I'm here to help
+          If you&#39;re interested in collaborating on AI-driven solutions, innovative web applications, or cloud-based projects, let&#39;s connect! I&#39;m always open to new opportunities, internships, and creative challenges in tech.
           </p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
@@ -120,7 +119,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
+            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-gradient-to-r from-royal via-lavender to-fuchsia hover:from-fuchsia hover:via-royal hover:to-lavender hover-animation transition-all duration-300"
           >
             {!isLoading ? "Send" : "Sending..."}
           </button>
