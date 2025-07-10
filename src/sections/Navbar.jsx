@@ -37,7 +37,7 @@ const Navbar = () => {
             className="text-3xl font-bold transition-colors text-neutral-400 hover:text-white"
             style={{ fontFamily: 'Handjet', fontWeight: 400 }}
           >
-              MAGESH
+              Magesh K B
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
